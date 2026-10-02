@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+    span{
+        color: aqua;
+    }
+    body{
+        margin: 0;
+       
+    }
+    
+    #h1{
+        color: white;
+    }
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        background: rgba(46, 85, 95, 0.747);
+        border-bottom: 2px solid rgb(211, 211, 226);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100000;
+    }
+    .links a{
+        padding: 6px;
+        text-decoration: none;
+        color: white;
+        
+    }
+    .links a:hover{
+        color: rgb(6, 1, 8);
+    }
+    .img{
+        margin-top: 13vh;
+         background: url("we.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 85vh;
+
+    }
+    .overlay{
+        position: absolute;
+        color: white;
+        text-align: center;
+        /* margin-top: 20%;
+        margin-left: 30%; */
+        background: rgb(24, 23, 23,0.2);
+        height: 85vh;
+        width: 100%;
+        
+        
+    }
+    .words{
+        color: white;
+        font-weight: bold   ;
+        position: absolute;
+        margin: 20%;
+        margin-left: 300px;
+        font-size: 20px;
+    }
+    .rooms{
+        display: flex ;
+        height: 99vh;
+        background: rgb(90, 83, 83);
+    }
+    .card1{
+        background: rgba(225,225, 225, 0.9);
+        height: 200px;
+        width: 230px;
+        background-size: 80px;
+        background-repeat: no-repeat;
+        padding: 6px;
+        margin-left: 20px;
+        position: relative;
+        margin-top: 20%;
+        border-radius: 12px;
+        color: rgb(14, 13, 13);
+        text-transform: capitalize;
+        font-weight: bold;
+        text-align: center;
+        font-size: 20px;
+
+    }
+    .card1:hover{
+        background: rgba(225,225, 225, 0.8);
+        transform: translate(10px);
+        transition: 0.8s;
+
+    }
+    .card2:hover{
+        background: rgba(225,225, 225, 0.8);
+        transform: translate(10px);
+        transition: 0.8s;
+
+    }
+    .card3:hover{
+        background: rgba(225,225, 225, 0.8);
+        transform: translate(10px);
+        transition: 0.8s;
+
+    }
+    .card4:hover{
+        background: rgba(225,225, 225, 0.8);
+        transform: translate(10px);
+        transition: 0.8s;
+
+    }
+    .card5:hover{
+        background: rgba(225,225, 225, 0.8);
+        transform: translate(10px);
+        transition: 0.8s;
+
+    }
+    .card2{
+          background: rgba(225,225, 225, 0.9);
+        height: 200px;
+        width: 230px;
+        background-size: 80px;
+        background-repeat: no-repeat;
+        padding: 6px;
+        margin-left: 20px;
+        position: relative;
+        margin-top: 20%;
+        border-radius: 12px;
+         color: rgb(14, 13, 13);
+        text-transform: capitalize;
+        font-weight: bold;
+        text-align: center;
+        font-size: 20px;
+
+    }
+    .card3{
+        background: rgb(213, 219, 219);
+        height: 200px;
+        width: 230px;
+        background-size: 80px;
+        background-repeat: no-repeat;
+        padding: 6px;
+        margin-left: 20px;
+        position: relative;
+        margin-top: 20%;
+        border-radius: 12px;
+        border-radius: 12px;
+         color: rgb(14, 13, 13);
+        text-transform: capitalize;
+        font-weight: bold;
+        text-align: center;
+        font-size: 20px;
+
+    }
+    .card4{
+        background: rgb(186, 189, 189);
+        height: 200px;
+        width: 230px;
+        background-size: 80px;
+        background-repeat: no-repeat;
+        padding: 6px;
+        margin-left: 20px;
+        position: relative;
+        margin-top: 20%;
+        border-radius: 12px;
+       color: rgb(14, 13, 13);
+        text-transform: capitalize;
+        font-weight: bold;
+        text-align: center;
+        font-size: 20px;
+
+    }
+    .card5{
+        background: rgb(199, 202, 202);
+        height: 200px;
+        width: 230px;
+        background-size: 80px;
+        background-repeat: no-repeat;
+        padding: 6px;
+        margin-left: 20px;
+        position: relative;
+        margin-top: 20%;
+        border-radius: 12px;
+          color: rgb(14, 13, 13);
+        text-transform: capitalize;
+        font-weight: bold;
+        text-align: center;
+        font-size: 20px;
+
+    }
+    img{
+        height: 130px;
+        width: 100%;
+       
+    }
+    .title{
+        position: absolute;
+        margin-top: 18vh;
+        margin-left: 30%;
+    }
+
+
+
+
+
+
+
+    .gym{
+        margin-top: 0;
+        height: 100vh;
+        background: #8a8484;
+        text-align: center;
+        
+    }
+    .coming{
+        position: absolute;
+        margin-top: 20%;
+        color: white ;
+        margin-left: 50vh;
+        font-size: 90px;
+    }
+    footer{
+        background: black;
+        padding: 6px;
+        
+    }
+   #h2{
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+   }
+</style>
+
+<body>
+    <header>
+        <h1 id="h1">EASY- <span>HOTEL</span></h1>
+        <div class="links">
+            <a href="#">HOME</a>
+            <a href="#rooms">ROOMS</a>
+            <a href="#gym">GYM</a>
+            <a href="#">ABOUT US</a>
+        </div>
+    </header>
+    <div class="img">
+        <div class="overlay">
+            <div class="words">
+<h1 >WELCOME TO EASY-<span>HOTEL</span></h1>
+<P  >Scrol down ward to book your desired option</P>
+</div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- rooms division -->
+     <div class="rooms" id="rooms">
+ <h1 class="title">AVAILABLE ROOMS FOR YOU</h1>
+
+<div class="card1">
+    <img src="weeee.png" alt="books" >
+    <p>study room</p>
+</div>
+<div class="card2">
+    <img src="we.jpg" alt="coffe">
+    <p>coffe room</p>
+</div>
+<div class="card3">
+    <img src="download (8).jpg" alt="fashoin">
+    <p>FAshioning room</p>
+</div>
+<div class="card4">
+    <img src="bb.jpg" alt="cooking">
+    <p>barking room</p>
+</div>
+<div class="card5">
+<img src="download (6).jpg" alt="art room">
+<p>artist room</p>
+</div>
+     </div>
+
+
+
+
+
+
+
+
+     <!-- gym part -->
+      <div class="gym" id="gym">
+        <h1 class="coming">coming soon.....</h1>
+      </div>
+
+
+      <footer>
+        <center>
+             <h1 id="h2">EASY- <span>HOTEL copy &copy;all right reserved chris</span></h1>
+        </center>
+      </footer>
+</body>
+</html>

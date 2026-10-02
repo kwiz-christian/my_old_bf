@@ -1,0 +1,153 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: rgb(105, 180, 6);
+        display: flex;
+        margin: 0;
+    }
+    .text{
+        background: rgba(225,225,225, 0.2);
+        height: 300px;
+        margin-left: 20%;
+        width: 400px;
+        margin-top: 140px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+    }
+    .inputs{
+        background: #a51586;
+        height: 300px;
+        width: 400px;
+        margin-top: 140px;
+         border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    h1{
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 50px;
+    }
+    p{
+        font-size: 1rem;
+       color: white;
+       font-weight: bold;
+       margin-left: 10px;
+    }
+    input{
+        width: 90%;
+        padding: 6px;
+        margin-left: 20px;
+        background: rgba(255, 255, 255,0.2);    
+        outline: none;
+        border: none;
+        color: wheat;
+    }
+    label{
+        margin-left: 20px;
+        margin-top: 20px;
+        
+    }
+    ::placeholder{
+        color: white;
+    }
+    .field{
+        position: absolute;
+     width: 400px;
+        margin-top: 50px;
+    }
+    button{
+        background: aqua;
+        width: 90%;
+        margin-left: 20px;
+        border-radius: 10px;
+        border: none;
+        padding: 7px;
+        margin-top: 10px;
+    }
+    input:focus{
+        border: white;
+        outline:none;
+        background: rgba(255, 255, 255,0.5);
+        color: white ;
+        
+    }
+    #msg{
+        text-align: center;
+        color: chartreuse;
+    }
+    .load{
+        background: transparent;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border-right: #7fa515 3px solid;
+        border-left: #154fa5 3px solid;
+        border-top: #13beb0 3px solid;
+        border-bottom: #aec00c 3px solid;
+        margin-left: 200px;
+        animation: move 2s infinite;
+    }
+    
+    @keyframes move{
+        from{
+            transform:rotate(0deg);
+        }
+        to{
+            transform:rotate(360deg);
+        }
+    }
+</style>
+<body>
+    <div class="text">
+        <h1>welcome</h1>
+        <p>Book rooms, gym,swimming pools and movies shows</p>
+    </div>
+    <div class="inputs">
+        <div class="field">
+            <form action="">
+        <label for="">Full names</label>
+        <input type="text" placeholder="names ..." id="names">
+        <label for="">Email</label>
+        <input type="email" placeholder="Enter your email"  id="email">
+        <label for="">Password</label>
+        <input type="password" placeholder="enter your password" id="password">
+        <button onclick="login(event)">submit</button>
+        </form>
+        <div class="load" id="load"></div>
+        <div id="msg"></div>
+        </div>
+    </div>
+    <script>
+        const msg = document.getElementById("msg");
+        const load = document.getElementById("load");
+        load.style.display="none";
+        function login(){
+            event.preventDefault();
+            const person = document.getElementById("names").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const pasword = document.getElementById("password").value.trim();
+
+            if(!email || !pasword || name){
+                msg.innerHTML="fill all field";
+                setTimeout(function time(){
+                    msg.innerHTML=" ";
+                },3000)
+            }else{
+                load.style.display="block";
+                 setTimeout(function time(){
+                    window.location.href="doc.html";
+                },5000)
+                                  
+            }
+
+        }
+    </script>
+</body>
+</html>

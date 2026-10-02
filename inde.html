@@ -1,0 +1,168 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+body{
+    background: rgb(153, 100, 153);
+    margin: 0;
+}
+
+form{
+    height: 200px;
+    width: 400px;
+    margin-left: 30px;
+    margin-bottom: 70px;
+
+}
+input{
+    width: 90%;
+    padding: 6px;
+    outline: none;
+    background: rgba(225, 225,225, 0.3);
+    border: none;
+}
+input:focus{
+    background: rgba(225, 225,225, 0.9);
+    padding: 8px;
+}
+select{
+    width: 90%;
+    padding: 7px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: rgba(225, 225,225, 0.3);
+
+
+
+}
+button{
+    background: aqua;
+    width: 90%;
+    border: none;
+    padding: 7px;
+    margin-top: 10px;
+    border-radius: 6px;
+}
+label{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+
+}
+table{
+    width: 90%;
+    margin-left: 30px;
+    border-collapse: collapse;
+    border: 2px solid aqua;
+}
+#row{
+    background: rgb(230, 222, 222);
+    height: 10px;
+    text-align: center;
+}
+#row:hover{
+    background: white;
+    
+}
+
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+}
+
+</style>
+<body>
+    <h1>student managment system</h1>
+    <form >
+        <label>Student name</label>
+    <input type="text" placeholder="name" id="name" pattern="[^0-9]*" title="number not allowed">
+    <label>Student age</label>
+    <input type="number" placeholder="Enter your age" id="age">
+    <label >student marks</label>
+    <input type="number" placeholder="Enter your Marks" id="marks">
+    
+    <select  id="class">
+        <option value="">Choose class</option>
+        <option value="L3SOD">L3SOD</option>
+        <option value="L4SOD">L4SOD</option>
+        <option value="L5SOD">L5SOD</option>
+        <option value="L3NIT">L3NIT</option>
+        <option value="L4NIT">L4NIT</option>
+        <option value="L5NIT">L5NIT</option>
+        <option value="S4ACC">S4ACC</option>
+        <option value="S5ACC">S5ACC</option>
+        <option value="S6ACC">S6ACC</option>
+    </select>
+
+<button onclick="addstudent()">add student</button>
+</form>
+    <table border="2" >
+        <thead >
+            <th>Names</th>
+            <th>class</th>
+            <th>Age</th>
+            <th>Marks</th>
+
+        </thead>
+        <tbody id="table">
+           <tr ></tr>
+
+        </tbody>
+    </table>
+    
+</body>
+</html>
+
+<script>
+    function addstudent(){
+        event.preventDefault();
+        let name = document.getElementById("name").value;
+        let Sclass= document.getElementById("class").value;
+        let age = document.getElementById("age").value;
+        let marks = document.getElementById("marks").value;
+        let table = document.getElementById("table");
+        let rom = `
+         <tr id="row">
+                <td>${name}</td>
+                <td>${Sclass}</td>
+                <td>${age}</td>
+                <td>${marks}%</td>
+            </tr>
+        `;
+      
+
+        if(!name || !Sclass || !age || !marks){
+            alert("fill all fields");
+            return;
+        }
+
+
+        if(marks>100){
+            alert('marks should be less than 100%');
+            return;
+        }
+        if(age<15){
+            alert("student age must be over 15 years old");
+            return;
+        }
+
+
+        table.innerHTML+=rom;
+
+        document.getElementById("name").value="";
+        document.getElementById("class").value="";
+        document.getElementById("age").value="";
+        document.getElementById("marks").value="";
+
+
+
+    }
+</script>
